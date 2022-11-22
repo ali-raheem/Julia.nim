@@ -1,9 +1,15 @@
 import std/complex, std/math, std/random
 
-const width = 1920*2
-const height = 1080*2
-const maxValue = 255
-const numColours = 16
+const
+  width = 1920*2
+  height = 1080*2
+  maxValue = 255
+  numColours = 16
+  scaleX = 1.92
+  scaleY = 1.08
+  escape = 5*pow((scaleX * scaleY), 2)
+  maxIter = maxValue
+  zc = complex(-0.4, 0.6)
 
 type
   RGB = enum
@@ -11,17 +17,7 @@ type
   Colour = array[red..blue, int]
   Palette = array[0..numColours, Colour]
 
-
-const paletteSize = maxValue/numColours
-
-const scaleX = 1.92
-const scaleY = 1.08
-const escape = 5*pow((scaleX * scaleY), 2)
-const maxIter = maxValue
-const zc = complex(-0.4, 0.6)
-
-var
-  p: Palette
+var p: Palette
 
 randomize()
 for c in p.mitems:
