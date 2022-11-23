@@ -4,6 +4,6 @@ Simple fractal generator in Nim.
 
 ## Examples
 
-![Black and white](field.png)
-![Coloured in](coloured.png)
-![Bigger](wallpaper.png)
+![Black and white](/field.png)
+![Coloured in](/coloured.png)
+![Bigger](/wallpaper.png)
